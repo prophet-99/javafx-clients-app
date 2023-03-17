@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.prophet99.clientsapp.controllers.MainController">
+   <children>
+      <Group layoutX="16.0" layoutY="14.0">
+         <children>
+            <Label layoutY="2.0" prefHeight="30.0" prefWidth="106.0" text="Client list" textFill="#1b1a1a">
+               <font>
+                  <Font name="Lato Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="clBtnManage" layoutX="695.0" layoutY="1.0" mnemonicParsing="false" onAction="#openCreateClientModal" text="Create" textFill="#1b1a1a">
+               <font>
+                  <Font name="Lato Regular" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+      <Separator layoutX="16.0" layoutY="53.0" prefHeight="0.0" prefWidth="768.0" />
+      <Group layoutX="16.0" layoutY="56.0">
+         <children>
+            <TextField fx:id="clTxtSearch" layoutX="186.0" layoutY="14.0" onKeyPressed="#searchClientFromKeyEvent" prefHeight="25.0" prefWidth="209.0" promptText="Type code, name or last name" />
+            <Label text="Code, name or last name" textFill="#666666">
+               <font>
+                  <Font name="Lato Regular" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="16.0" right="16.0" top="16.0" />
+               </padding>
+            </Label>
+            <Button fx:id="clBtnSearch" layoutX="405.0" layoutY="15.0" mnemonicParsing="false" onAction="#searchClient" text="Search" textFill="#1b1a1a">
+               <font>
+                  <Font name="Lato Regular" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+      <Label layoutX="17.0" layoutY="108.0" text="(*) Double click on the record to edit or delete" textFill="#666666">
+         <font>
+            <Font name="Lato Regular" size="12.0" />
+         </font>
+         <padding>
+            <Insets bottom="16.0" right="8.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="clTable" layoutX="14.0" layoutY="139.0" prefHeight="302.0" prefWidth="768.0">
+        <columns>
+          <TableColumn fx:id="clColumnCode" prefWidth="64.80001831054688" text="Code" />
+          <TableColumn fx:id="clColumnFirstName" prefWidth="82.39999389648438" text="First name" />
+          <TableColumn fx:id="clColumnLastName" prefWidth="182.39996337890625" text="Last name" />
+          <TableColumn fx:id="clColumnEmail" prefWidth="193.5999755859375" text="Email" />
+          <TableColumn fx:id="clColumnPhone" prefWidth="98.39996337890625" text="Phone" />
+          <TableColumn fx:id="clColumnCreatedAt" prefWidth="121.60003662109375" text="Created at" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</Pane>

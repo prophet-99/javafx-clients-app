@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.prophet99.clientsapp.controllers.CreateClientController">
+   <children>
+      <Label layoutX="10.0" layoutY="12.0" prefHeight="30.0" prefWidth="141.0" text="Create client" textFill="#1b1a1a">
+         <font>
+            <Font name="Lato Bold" size="24.0" />
+         </font>
+         <padding>
+            <Insets bottom="8.0" />
+         </padding>
+      </Label>
+      <Separator layoutX="10.0" layoutY="49.0" prefHeight="0.0" prefWidth="310.0" />
+      <Group layoutX="10.0" layoutY="61.0">
+         <children>
+            <Label layoutY="3.0" text="First name" textFill="#666666">
+               <font>
+                  <Font name="Lato Regular" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="16.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="clTxtFirstName" layoutX="87.0" prefHeight="25.0" prefWidth="217.0" promptText="Type first name" />
+         </children>
+      </Group>
+      <Group layoutX="10.0" layoutY="100.0">
+         <children>
+            <Label layoutY="2.0" text="Last name" textFill="#666666">
+               <font>
+                  <Font name="Lato Regular" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="16.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="clTxtLastName" layoutX="87.0" prefHeight="25.0" prefWidth="218.0" promptText="Type last name" />
+         </children>
+      </Group>
+      <Group layoutX="10.0" layoutY="138.0">
+         <children>
+            <Label layoutY="4.0" text="Email" textFill="#666666">
+               <font>
+                  <Font name="Lato Regular" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="16.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="clTxtEmail" layoutX="87.0" prefHeight="25.0" prefWidth="218.0" promptText="Type email" />
+         </children>
+      </Group>
+      <Group layoutX="10.0" layoutY="176.0">
+         <children>
+            <Label layoutY="4.0" text="Phone" textFill="#666666">
+               <font>
+                  <Font name="Lato Regular" size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="16.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="clTxtPhone" layoutX="87.0" prefHeight="25.0" prefWidth="219.0" promptText="Type phone" />
+         </children>
+      </Group>
+      <Button fx:id="clBtnSave" layoutX="261.0" layoutY="215.0" mnemonicParsing="false" onAction="#saveClient" text="Save" textFill="#1b1a1a">
+         <font>
+            <Font name="Lato Regular" size="16.0" />
+         </font>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</Pane>
